@@ -1,0 +1,41 @@
+workspace/
+data/*
+!data/raw/
+data/raw/*
+!data/raw/.gitkeep
+.venv/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+.DS_Store
+# Local vector stores, including default Chroma persistence outside data/.
+chroma/
+.chroma/
+chroma_db/
+chroma_data/
+vector_db/
+vector_store/
+# Private immutable hardening releases and historical evidence archives.
+/archive/
+/releases/
+chroma.sqlite3
+chroma.sqlite3-*
+# Defense in depth for accidentally misplaced private model/vector/backup artifacts.
+/models/
+/recovery/
+/backup/
+*.safetensors
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.gguf

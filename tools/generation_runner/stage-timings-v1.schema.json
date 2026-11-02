@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "grounded-generation-stage-timings-1.0",
+  "title": "Source-free monotonic runner stage timings",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "question_id",
+    "run_id",
+    "mode",
+    "clock",
+    "unit",
+    "started_at",
+    "ended_at",
+    "scope",
+    "end_to_end_ms",
+    "stages",
+    "spans",
+    "unattributed_overhead_ms",
+    "error_stage",
+    "request_sha256",
+    "M8_package_sha256",
+    "generation_label",
+    "preflight_observation",
+    "provider_reported_latency_ms",
+    "provider_reported_latency_status",
+    "existing_usage_latency_ms",
+    "existing_usage_latency_kind",
+    "measurement_semantics"
+  ],
+  "properties": {
+    "schema": {
+      "const": "grounded-generation-stage-timings-1.0"
+    },
+    "question_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "MOCK",
+        "LIVE",
+        "DRY-RUN"
+      ]
+    },
+    "clock": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "ended_at": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "end_to_end_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stage",
+          "status",
+          "calls",
+          "duration_ms",
+          "inclusive_ms"
+        ],
+        "properties": {
+          "stage": {
+            "enum": [
+              "SAVED_INPUT_VERIFICATION",
+              "M8_EVIDENCE_ASSEMBLY",
+              "M8_SOURCE_VALIDATION",
+              "PROMPT_ASSEMBLY",
+              "MODEL_PREFLIGHT",
+              "MODEL_METADATA",
+              "MODEL_TOKEN_COUNT",
+              "LLM_GENERATION",
+              "POST_GENERATION_VALIDATION",
+              "ARTIFACT_PERSISTENCE",
+              "REQUEST_BINDING_AND_POLICY",
+              "GENERATION_SERVICE_OVERHEAD",
+              "FINAL_SOURCE_CHECK"
+            ]
+          },
+          "status": {
+            "enum": [
+              "MEASURED",
+              "FAILED",
+              "SKIPPED"
+            ]
+          },
+          "calls": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "duration_ms": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "inclusive_ms": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "stage",
+          "parent",
+          "start_ns",
+          "end_ns",
+          "status",
+          "duration_ms",
+          "exclusive_ms"
+        ],
+        "properties": {
+          "stage": {
+            "enum": [
+              "SAVED_INPUT_VERIFICATION",
+              "M8_EVIDENCE_ASSEMBLY",
+              "M8_SOURCE_VALIDATION",
+              "PROMPT_ASSEMBLY",
+              "MODEL_PREFLIGHT",
+              "MODEL_METADATA",
+              "MODEL_TOKEN_COUNT",
+              "LLM_GENERATION",
+              "POST_GENERATION_VALIDATION",
+              "ARTIFACT_PERSISTENCE",
+              "REQUEST_BINDING_AND_POLICY",
+              "GENERATION_SERVICE_OVERHEAD",
+              "FINAL_SOURCE_CHECK"
+            ]
+          },
+          "parent": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "start_ns": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end_ns": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "status": {
+            "enum": [
+              "MEASURED",
+              "FAILED"
+            ]
+          },
+          "duration_ms": {
+            "type": "number",
+            "minimum": 0
+          },
+          "exclusive_ms": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "unattributed_overhead_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "error_stage": {
+      "enum": [
+        "SAVED_INPUT_VERIFICATION",
+        "M8_EVIDENCE_ASSEMBLY",
+        "M8_SOURCE_VALIDATION",
+        "PROMPT_ASSEMBLY",
+        "MODEL_PREFLIGHT",
+        "MODEL_METADATA",
+        "MODEL_TOKEN_COUNT",
+        "LLM_GENERATION",
+        "POST_GENERATION_VALIDATION",
+        "ARTIFACT_PERSISTENCE",
+        "REQUEST_BINDING_AND_POLICY",
+        "GENERATION_SERVICE_OVERHEAD",
+        "FINAL_SOURCE_CHECK",
+        null
+      ]
+    },
+    "request_sha256": {
+      "type": "string"
+    },
+    "M8_package_sha256": {
+      "type": "string"
+    },
+    "generation_label": {
+      "type": "string"
+    },
+    "preflight_observation": {
+      "type": "string"
+    },
+    "provider_reported_latency_ms": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "provider_reported_latency_status": {
+      "type": "string"
+    },
+    "existing_usage_latency_ms": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "existing_usage_latency_kind": {
+      "type": "string"
+    },
+    "measurement_semantics": {
+      "type": "string"
+    }
+  }
+}

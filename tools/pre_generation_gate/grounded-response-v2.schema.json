@@ -1,0 +1,181 @@
+{
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_text": {
+          "minLength": 1,
+          "title": "Claim Text",
+          "type": "string"
+        },
+        "evidence_unit_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Unit Ids",
+          "type": "array"
+        },
+        "supporting_quotes": {
+          "items": {
+            "$ref": "#/$defs/Quote"
+          },
+          "minItems": 1,
+          "title": "Supporting Quotes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "claim_text",
+        "evidence_unit_ids",
+        "supporting_quotes"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Conflict": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "evidence_unit_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Unit Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "description",
+        "evidence_unit_ids"
+      ],
+      "title": "Conflict",
+      "type": "object"
+    },
+    "Quote": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_unit_id": {
+          "minLength": 1,
+          "title": "Evidence Unit Id",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_unit_id",
+        "quote"
+      ],
+      "title": "Quote",
+      "type": "object"
+    },
+    "RequirementCoverage": {
+      "additionalProperties": false,
+      "properties": {
+        "requirement": {
+          "minLength": 1,
+          "title": "Requirement",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "PARTIAL",
+            "UNSUPPORTED",
+            "UNCERTAIN"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "evidence_unit_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Unit Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "requirement",
+        "status",
+        "evidence_unit_ids"
+      ],
+      "title": "RequirementCoverage",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "ANSWERED",
+        "PARTIAL",
+        "ABSTAINED"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "answer": {
+      "title": "Answer",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "title": "Claims",
+      "type": "array"
+    },
+    "missing_information": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Information",
+      "type": "array"
+    },
+    "relevant_qualifications": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Relevant Qualifications",
+      "type": "array"
+    },
+    "requirement_coverage": {
+      "items": {
+        "$ref": "#/$defs/RequirementCoverage"
+      },
+      "title": "Requirement Coverage",
+      "type": "array"
+    },
+    "conflicts_detected": {
+      "items": {
+        "$ref": "#/$defs/Conflict"
+      },
+      "title": "Conflicts Detected",
+      "type": "array"
+    }
+  },
+  "required": [
+    "status",
+    "answer",
+    "claims",
+    "missing_information",
+    "relevant_qualifications",
+    "requirement_coverage",
+    "conflicts_detected"
+  ],
+  "title": "GroundedResponse",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rag-hub:grounded-response-2.0",
+  "description": "Structural contract only; coverage/conflicts are model declarations. Python validators additionally enforce relationships and explicit authorized-ID scope. No semantic entailment, quotation fidelity or provider compatibility is certified."
+}

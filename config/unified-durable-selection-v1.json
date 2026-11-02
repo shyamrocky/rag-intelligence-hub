@@ -1,0 +1,5 @@
+{
+  "descriptor_path": "data/validation/provenance/durable-consumer-v1/BINDINGS.json",
+  "descriptor_sha256": "3270233cf14f7f9f1b2295d4db4468e7b3725ef3a50761dc247f6987f4e35cb7",
+  "schema": "durable-unified-selection-1.0"
+}

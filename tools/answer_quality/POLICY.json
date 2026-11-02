@@ -1,0 +1,22 @@
+{
+  "schema": "answer-quality-policy-2.0",
+  "architectural_authority": "Project owner Semantic Grounding & Answer Quality Validation v2 instruction; ADR D052",
+  "dimensions": ["structure", "citation_integrity", "quotation_fidelity", "claim_grounding", "completeness", "qualifications_and_conflicts"],
+  "outcomes": ["VALIDATED", "VALIDATION_FAILED", "REVIEW_REQUIRED"],
+  "citation_integrity": "STRICT_LIVE_M8_AND_EXACT_REQUEST_BINDING",
+  "quotation_fidelity": {
+    "raw_exact_diagnostic_retained": true,
+    "automatic_transforms": ["PROSE_WHITESPACE_REFLOW", "UNICODE_CURLY_QUOTATION_MARKS"],
+    "limited_commas_and_terminal_periods": "INDETERMINATE_UNLESS_INDEPENDENT_MEANING_REVIEW_BINDS_EXACT_SPAN",
+    "pdf_line_end_hyphenation": "REQUIRES_HASH_BOUND_REVIEWED_LAYOUT_SPAN",
+    "prohibited": ["FUZZY_MATCH", "GENERAL_PUNCTUATION_REMOVAL", "GENERAL_HYPHEN_REMOVAL", "NUMBER_OR_NEGATION_NORMALIZATION", "TECHNICAL_SYMBOL_NORMALIZATION"],
+    "substantive_misquotation": "FAIL_WITHOUT_MISLABELING_AS_INVALID_CITATION"
+  },
+  "semantic_acceptance": "INDEPENDENT_TRUSTED_HUMAN_REVIEW_WITH_BOUND_PASSAGES_AND_REQUIREMENTS",
+  "optional_llm_judge": "INTERFACE_ONLY_PROVISIONAL_REQUIRES_SEPARATE_CALL_AUTHORIZATION_AND_HUMAN_ACCEPTANCE",
+  "self_reported_support": "NOT_INDEPENDENT_EVIDENCE",
+  "missing_assessment": "REVIEW_REQUIRED",
+  "unresolved_qualification_applicability": "REVIEW_REQUIRED",
+  "generation_authorized": false,
+  "historical_verdicts": "IMMUTABLE"
+}

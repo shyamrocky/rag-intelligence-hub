@@ -1,0 +1,7 @@
+{
+  "authorization_sha256": "eb2279423567c8af97d668789c0f29fc37addb1f754d9b88d5cbe4cb5939add3",
+  "expected_manifest_sha256": "2589cbcb33d239c26c71d1201fdb610d8960833f9cc6dbbe57ed43aa8b30b976",
+  "expected_release_sha256": "b901d0623ba64b3f7f62e4ae56a96fe95b4c427062211614b976b866c9212e3d",
+  "manifest_path": "data/validation/pdf/c14-scope-correction-v1/publications/eb2279423567c8af97d668789c0f29fc37addb1f754d9b88d5cbe4cb5939add3/manifest.json",
+  "release_path": "config/pdf-c14-scope-qa-successor-v1.json"
+}

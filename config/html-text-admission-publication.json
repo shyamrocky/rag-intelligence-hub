@@ -1,0 +1,7 @@
+{
+  "authorization_sha256": "b0460b5ed232e58a960538a39662ad5b40d944b92cd30c32148876f5d44cbc7c",
+  "expected_manifest_sha256": "dfc9325e1f987ab21162e79b92cc810617c37ce2dba69455952e5a97ef532796",
+  "expected_release_sha256": "fa82184bc7a1560da6e6c39bd65762f1a8bee5532b44b7b6bad8f0a9a506db61",
+  "manifest_path": "data/validation/html/text-recovery-v1/publications/87faef605b9fd6ae3e590ea53ea7855e259b1c23cb4f7c7fcea9d72e563450ac/manifest.json",
+  "release_path": "config/html-text-qa-successor.json"
+}

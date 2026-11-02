@@ -1,0 +1,1 @@
+{"manifest_path":"data/chunking/m3-c14-scope-v2/manifest.json","manifest_sha256":"f07828feea381507a76ed06e2b7d86f7bd79eab65c8f1188d70ce82cce92653c","reader":"rag_hub.qualified_chunk_catalog.QualifiedChunkCatalog","schema":"chunk-catalog-selection-1.0"}

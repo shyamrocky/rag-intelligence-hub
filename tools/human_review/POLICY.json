@@ -1,0 +1,13 @@
+{
+  "schema": "local-human-review-policy-1.0",
+  "authority": "Owner-authorized reusable local human-review workflow under ADR D052",
+  "identity_bootstrap": "Explicit local OS-operator enrollment with owner-supplied ID and display name, encrypted Ed25519 key and signed proof of possession; not external legal-identity certification",
+  "authentication": "Passphrase plus possession of enrolled encrypted private key on every decision",
+  "confirmation": "Exact decision, question ID and full review-package manifest SHA-256; never cached or defaulted",
+  "assessment_import": "Verify signature and active registration before supplying hash and allowlist to existing HumanReview importer",
+  "acceptance": "Existing post-generation-validation-2.0, including fresh live M8 source validation; an approval cannot override deterministic failures",
+  "expiry_days": 7,
+  "revocation": "Revoked or superseded credentials cannot qualify current acceptance; original signed records remain historical",
+  "duplicate_policy": "One decision per exact response/evidence/draft/policy target; revised assessments require new confirmation",
+  "generation_authorized": false
+}

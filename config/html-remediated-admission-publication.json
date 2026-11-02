@@ -1,0 +1,7 @@
+{
+  "authorization_sha256": "de1d7cf323663f72f79e7afcb5ee26807b93914f946f5c67a3caed3c30d49724",
+  "expected_manifest_sha256": "58ba7c6dd05382660ca7ffb4d240cc6d7268baeb887f9b34cd1185894592fd22",
+  "expected_release_sha256": "3390432be68b0be3306ddf88e95427c7fe4ee5b5394eff55ca76e84bba9547d2",
+  "manifest_path": "data/validation/html/scoped-admission-v2/publications/33b4cecdab00f865d9107d1a88853e5a211ce973ed0f667980d9a8673c4856f6/manifest.json",
+  "release_path": "config/html-context-qa-successor.json"
+}

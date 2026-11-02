@@ -1,0 +1,42 @@
+{
+  "continuation_preconditions": [
+    "Authorized model/request/source unchanged",
+    "Known reconciled usage and billing within all limits",
+    "Verified persisted raw body and receipts",
+    "Receipt/context/source/authorization remain fresh and valid",
+    "One request per question, zero automatic retries/fallback"
+  ],
+  "continue_with_review_when_safety_proven": [
+    "ANSWER_STATUS_REQUIREMENT_COVERAGE_CONTRADICTION",
+    "MALFORMED_INNER_JSON",
+    "MISSING_REQUIRED_RESPONSE_FIELDS",
+    "DUPLICATE_OR_UNKNOWN_RESPONSE_FIELDS",
+    "UNSUPPORTED_OUTPUT_FORMAT",
+    "REFUSAL_OR_ABSTENTION",
+    "KNOWN_BILLED_INCOMPLETE_OUTPUT",
+    "UNAUTHORIZED_CITATION_IN_OTHERWISE_AUTHENTIC_PACKAGE",
+    "QUOTATION_FIDELITY_FAILURE",
+    "MISSING_DISCLOSURE",
+    "PENDING_OR_FAILED_SEMANTIC_ASSESSMENT"
+  ],
+  "schema": "generation-response-disposition-policy-1.0",
+  "status": "OWNER_AUTHORIZED_IMPLEMENTATION_PENDING_REVIEW",
+  "stop": [
+    "SOURCE_OR_PUBLICATION_INTEGRITY_FAILURE",
+    "REQUEST_OR_TRUST_HASH_MISMATCH",
+    "INVALID_OR_EXPIRED_OR_CONSUMED_AUTHORIZATION",
+    "DUPLICATE_UNAUTHORIZED_ATTEMPT",
+    "UNAUTHORIZED_MODEL_OR_PROVIDER_ENDPOINT",
+    "CONTEXT_OR_COST_LIMIT_EXCEEDED",
+    "UNKNOWN_OR_INCONSISTENT_USAGE_BILLING",
+    "RAW_CAPTURE_OR_RESULT_PERSISTENCE_FAILURE",
+    "UNRESOLVED_PROVIDER_OR_TRANSPORT_FAILURE"
+  ],
+  "unconditional_rules": [
+    "Reject invalid citations for that answer; continuation never means answer acceptance.",
+    "Missing semantic assessment is REVIEW_REQUIRED, never an inferred pass.",
+    "Malformed candidate remains untrusted; do not weaken grounded-response-2.0.",
+    "Never convert independent-question continuation into automatic retry or admission-lock removal."
+  ],
+  "scope": "Quality findings never override source/request integrity, billing or generation authorization."
+}

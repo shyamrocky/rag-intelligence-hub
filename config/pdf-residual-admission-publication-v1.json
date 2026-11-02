@@ -1,0 +1,7 @@
+{
+  "authorization_sha256": "f082ef6102acccdeddbd7e9edbaf4f7165f36b3a5a50f9928228b8e96c7e9518",
+  "expected_manifest_sha256": "796bc668888ab2537bba55d1b3ddd03500782b68d3e73239e2ebff87dea55c9e",
+  "expected_release_sha256": "72918218e944187e19088647a061d03d9536ad5b702387b19272373d91ebf425",
+  "manifest_path": "data/validation/pdf/residual-recovery-v1/publications/f082ef6102acccdeddbd7e9edbaf4f7165f36b3a5a50f9928228b8e96c7e9518/manifest.json",
+  "release_path": "config/pdf-residual-qa-successor-v1.json"
+}

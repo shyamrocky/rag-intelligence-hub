@@ -1,0 +1,107 @@
+{
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_text": {
+          "minLength": 1,
+          "title": "Claim Text",
+          "type": "string"
+        },
+        "evidence_unit_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Unit Ids",
+          "type": "array"
+        },
+        "supporting_quotes": {
+          "items": {
+            "$ref": "#/$defs/Quote"
+          },
+          "minItems": 1,
+          "title": "Supporting Quotes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "claim_text",
+        "evidence_unit_ids",
+        "supporting_quotes"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Quote": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_unit_id": {
+          "minLength": 1,
+          "title": "Evidence Unit Id",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_unit_id",
+        "quote"
+      ],
+      "title": "Quote",
+      "type": "object"
+    }
+  },
+  "$id": "urn:rag-hub:grounded-response-1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Shape contract only. Python validators additionally enforce status/claim/reference relationships. Source entailment, quotation fidelity and answer quality are future checks.",
+  "properties": {
+    "answer": {
+      "title": "Answer",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "title": "Claims",
+      "type": "array"
+    },
+    "missing_information": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Missing Information",
+      "type": "array"
+    },
+    "relevant_qualifications": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Relevant Qualifications",
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "ANSWERED",
+        "PARTIAL",
+        "ABSTAINED"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "answer",
+    "claims",
+    "missing_information",
+    "relevant_qualifications"
+  ],
+  "title": "GroundedResponse",
+  "type": "object"
+}

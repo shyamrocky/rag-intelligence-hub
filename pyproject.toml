@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling==1.32.4"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rag-intelligence-hub"
+version = "0.1.0"
+description = "Learning-first, evidence-grounded RAG assistant (Milestone 1 scaffold)"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "markdown-it-py>=4,<5",
+    "pydantic>=2.14,<3",
+    "pymupdf>=1.26,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.1,<10", "ruff>=0.14,<1"]
+
+[project.scripts]
+rag-hub = "rag_hub.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rag_hub"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

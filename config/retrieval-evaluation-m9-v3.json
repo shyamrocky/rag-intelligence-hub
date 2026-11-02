@@ -1,0 +1,56 @@
+{
+  "schema": "m9-evaluation-config-1.0",
+  "version": "m9-v3",
+  "benchmark": {
+    "path": "data/evals/m9/benchmark-v1/BENCHMARK_MANIFEST.json",
+    "sha256": "17f1c6594ff7e435b3f0da636165c4daf105f9a768f13bac80742eb33640065d"
+  },
+  "approval": {
+    "path": "data/evals/m9/approvals/benchmark-v1.json",
+    "sha256": "5ba3cd13ee814b18094627b29a7761cff76859d7f7329a544cbd45e889f6477c"
+  },
+  "settings": {
+    "modes": [
+      "bm25",
+      "vector",
+      "hybrid"
+    ],
+    "top_k": 10,
+    "candidate_depth": 50,
+    "rrf_k": 60,
+    "filters": {},
+    "cutoffs": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "budgets": [
+      4000,
+      8000,
+      16000,
+      32000
+    ]
+  },
+  "components": {
+    "tools/evaluation/contract.py": "7d57da82f6eb9de51136430b4512289037d447d183856e68ab9b6027b965bcd1",
+    "tools/evaluation/metrics.py": "7f3d1a0a542fa8a849355cf249daeec369bf098b75a37804825a43933cdced5c",
+    "tools/evaluation/runner.py": "d412d7f25e606416b9ef6c343c2eea9451f781568c408d18d802af3e7c0d8c61"
+  },
+  "metric_policy": "Raw qrels recall plus equivalence-aware chunk recall; exact required-parent groups; answerable denominator26; unsupported separate; no post-result tuning",
+  "evidence_policy": "Unchanged accepted M8 atomic BGE budget; source/QA separation and complete-parent rehydration",
+  "diagnostic_policy": "Known-positive parent fit controls outside retrieval scoring; cheapest approved alternative using independently measured complete block reserves",
+  "M10_authorized": false,
+  "execution": {
+    "live_M8_gateway_count": 1,
+    "actual_budget_assemblies": 348,
+    "live_source_validation": "Every package through unchanged M8.assemble, which verifies native parents and all file bindings before and after.",
+    "extra_package_replay_questions": [
+      "M9-Q01",
+      "M9-Q21"
+    ],
+    "repeat_all_87_rankings": true,
+    "oracle_diagnostics": "All answerable reference controls independently assembled and replayed; never scored as retrieval.",
+    "reason": "Preliminary timing probes showed redundant package replay and concurrent filesystem checks increased local cost. No question, label, retriever, ranking, budget policy, source authority or metric settings changed. Preliminary v1/v2 excluded from final results."
+  }
+}

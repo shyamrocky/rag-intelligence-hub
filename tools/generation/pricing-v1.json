@@ -1,0 +1,61 @@
+{
+  "schema": "token-pricing-registry-1.0",
+  "version": "openai-observed-2026-10-27-v1",
+  "observed_on": "2026-10-27",
+  "policies": [
+    {
+      "model": "gpt-6-luna",
+      "effective_from": "2026-10-27",
+      "effective_through": "2026-11-03",
+      "effective_date_basis": "Application-observed policy window, not a claim about provider price-change date",
+      "currency": "USD",
+      "per_tokens": 1000000,
+      "input_rate": "0.10",
+      "cached_input_rate": "0.01",
+      "cache_write_30m_rate": "0.1250",
+      "cache_write_12h_rate": "0.250",
+      "output_rate": "0.50",
+      "long_context_threshold": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "tier_multipliers": {
+        "default": "1",
+        "flex": "0.5",
+        "priority": "2",
+        "fast": "2"
+      },
+      "region_multipliers": {
+        "global": "1",
+        "regional": "1.10"
+      },
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+    },
+    {
+      "model": "gpt-6.1-terra",
+      "effective_from": "2026-10-27",
+      "effective_through": "2026-11-03",
+      "effective_date_basis": "Application-observed policy window, not a claim about provider price-change date",
+      "currency": "USD",
+      "per_tokens": 1000000,
+      "input_rate": "1.00",
+      "cached_input_rate": "0.05",
+      "cache_write_30m_rate": "1.2500",
+      "cache_write_12h_rate": "2.500",
+      "output_rate": "5.00",
+      "long_context_threshold": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "tier_multipliers": {
+        "default": "1",
+        "flex": "0.5",
+        "priority": "2",
+        "fast": "2"
+      },
+      "region_multipliers": {
+        "global": "1",
+        "regional": "1.10"
+      },
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "authorization_sha256": "72944eb6a669fe4c2d3bd00506370c7788a491e1a74f7162082b918f697296be",
+  "expected_manifest_sha256": "9aff3640a48a47893d462c8be9a13398ffd8d642c6e1c5d7e589e94b597bf207",
+  "expected_release_sha256": "d8b280b183c5ac009b6d31c656545081b537b304676cb65e742e5e7719206300",
+  "manifest_path": "data/validation/pdf/durable-consumer-v1/publications/72944eb6a669fe4c2d3bd00506370c7788a491e1a74f7162082b918f697296be/manifest.json",
+  "release_path": "config/pdf-durable-qa-successor-v1.json"
+}

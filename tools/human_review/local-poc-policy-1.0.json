@@ -1,0 +1,13 @@
+{
+  "schema": "local-poc-review-policy-1.0",
+  "mode": "LOCAL_POC_REVIEW",
+  "authority": "Explicit owner instruction: Simplify Human Review for Week 2 POC",
+  "scope": "Direct localhost Streamlit use only; literal loopback server bind, local Host/Origin, no forwarded proxy headers",
+  "authentication": "None. Owner-supplied reviewer label and explicit per-record confirmation",
+  "approval_status": "OWNER_APPROVED_POC",
+  "signed_human_validation": false,
+  "technical_checks": "Reuse unchanged live M8 source reconstruction, exact request/package/question bindings and validation-2.0 citation/schema/quotation/disclosure controls",
+  "acceptance_boundary": "Owner POC attestation only. Never authenticated HUMAN_REVIEW or fully_validated; cannot override technical failures",
+  "history": "New sealed versioned records, atomically published. Exact duplicate decisions blocked; explicit later decisions retained as separate versions",
+  "generation_authorized": false
+}

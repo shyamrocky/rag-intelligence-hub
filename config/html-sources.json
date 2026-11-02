@@ -1,0 +1,95 @@
+{
+  "authority_path": "workspace/Project-KickOff-Docs/RAG_Intelligence_Hub_Consolidated_Corpus_finalfindings_Child1_2026-10-18.md",
+  "authority_sha256": "8d0c47cb45ad08ca111b7229a848a837727c52443f183ab8ebfcc71786828f2b",
+  "schema_version": "html-corpus-1.0",
+  "sources": [
+    {
+      "canonical_url": "https://developers.llamaindex.ai/python/framework/understanding/rag/",
+      "doc_id": "C03",
+      "publisher": "LlamaIndex",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Introduction to RAG"
+    },
+    {
+      "canonical_url": "https://docs.langchain.com/oss/python/integrations/splitters/recursive_text_splitter",
+      "doc_id": "C05",
+      "publisher": "LangChain",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Recursive Text Splitter"
+    },
+    {
+      "canonical_url": "https://www.pinecone.io/learn/chunking-strategies/",
+      "doc_id": "C07",
+      "publisher": "Pinecone",
+      "source_type": "article",
+      "source_version": null,
+      "title": "Chunking Strategies for LLM Applications"
+    },
+    {
+      "canonical_url": "https://docs.pinecone.io/guides/index-data/indexing-overview",
+      "doc_id": "C08",
+      "publisher": "Pinecone",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Index Data Overview"
+    },
+    {
+      "canonical_url": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "doc_id": "C09",
+      "publisher": "Anthropic",
+      "source_type": "article",
+      "source_version": null,
+      "title": "Contextual Retrieval"
+    },
+    {
+      "canonical_url": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking",
+      "doc_id": "C10",
+      "publisher": "Microsoft Azure AI Search",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "RRF Scoring"
+    },
+    {
+      "canonical_url": "https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "doc_id": "C11",
+      "publisher": "Sentence Transformers",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Retrieve & Re-Rank"
+    },
+    {
+      "canonical_url": "https://docs.n8n.io/build/integrate-ai/understand-ai-components/retrieve-relevant-context",
+      "doc_id": "C12",
+      "publisher": "n8n",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Retrieve Relevant Context"
+    },
+    {
+      "canonical_url": "https://docs.pinecone.io/guides/assistant/overview",
+      "doc_id": "C13",
+      "publisher": "Pinecone",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Pinecone Assistant Overview"
+    },
+    {
+      "canonical_url": "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/",
+      "doc_id": "C15",
+      "publisher": "Ragas",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Available Metrics"
+    },
+    {
+      "canonical_url": "https://docs.langchain.com/langsmith/evaluate-rag-tutorial",
+      "doc_id": "C16",
+      "publisher": "LangSmith",
+      "source_type": "documentation",
+      "source_version": null,
+      "title": "Evaluate a RAG Application"
+    }
+  ]
+}

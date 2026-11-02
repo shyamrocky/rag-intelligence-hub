@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "markdown-it-py": "4.2.0",
+    "pydantic": "2.14.1",
+    "pymupdf": "1.28.2"
+  },
+  "files": {
+    "src/rag_hub/acquire.py": "a1742b3ebdeb451be563e6e64186fae070eb2c82395e16981b2b3a785bad6365",
+    "src/rag_hub/content_validation.py": "53c429cc13e311af97ae6870b38bc871de1647c9adeb6c7525b221f4fe5ec30d",
+    "src/rag_hub/pdf_classification.py": "4b78acc9d90692c496bcb1c507ea816b0dca2d459adc9f0e9e9aee2421cc05f0",
+    "src/rag_hub/pdf_corpus.py": "1695c989356057717e2c10197fa815de01e48ce2a29da39c2dc31a404017f1f6",
+    "src/rag_hub/pdf_nontext.py": "b851492002de3936fc4ea879ac3768e4403fb8edcdae28016c5c0d20cfb0bb76",
+    "src/rag_hub/pdf_prose_execution.py": "1f9a134daeac9cf650b5786abafa1c36a4e8218368487854bd94cd3bde0bf447",
+    "src/rag_hub/pdf_prose_handoff.py": "7f2c84d8f35a290964dfbc487f0a6ce26a6458aecbc537a1656b2c09ce9c5d27",
+    "src/rag_hub/pdf_prose_review.py": "9ddd442aa3adbaff04e909428977d4808ab5e3cd7555f651e57197723b471194",
+    "src/rag_hub/schemas.py": "1eb5523cc4542912465ad2e235cd997f3bf90f22f8c7d9cae8ad1f665481e61e",
+    "src/rag_hub/shared/builtins.py": "5d9985f027c4913301260ae514cebd568af9500e40db38142d62ba8fa412e55f",
+    "src/rag_hub/shared/contracts.py": "3aa11d45381fe24843cd9fae67a69fd2b95d17abd583e379e25f805f9a8f8e89",
+    "src/rag_hub/shared/evidence.py": "1239e29f42960301cee1340739a8a38357bc3a7cafccbb0b68cc1f561bb3b231",
+    "src/rag_hub/shared/guard.py": "977461d2a440d31a969dcf99a198966f152a6db3656b9bbdc97129da66129387",
+    "src/rag_hub/shared/qa.py": "afb61d207a72cf412d4c5a8f3f13e280d918d5e99a9923a76f7430b1aca17cab",
+    "src/rag_hub/shared/registry.py": "981eaff10bf807521e18bdaa5a2172f292faa4fabce8d31b62e990f2a226aacc",
+    "src/rag_hub/shared/stage_contract.py": "2dd79f41d68054d563ab6c53594fd17ee65227fb3e3b68da3ba25b6309eb1e31",
+    "src/rag_hub/shared/structure.py": "a7989cb2dcdcda55948127b993d53a0a74d89c61bd75fb4c6eb63797a6d5bd85",
+    "src/rag_hub/source_fidelity.py": "22cbf30a8c60aaffcde8234b4640de2a496db9422f8d8c3541c1f0f66dafc91a",
+    "src/rag_hub/validation_models.py": "4c274184f26b750626cb1f41a4b3ea24a07bad4f6e66f1de16aaa95dfd4eeb85",
+    "src/rag_hub/validation_pipeline.py": "9edb4e505c83ec415b6b8f3639de3918b52bfa2e149c5a70f62d2275154ee439",
+    "src/rag_hub/validation_reviews.py": "64aad980890383501e91e4e01f172046f6707144547c7b9291bed11e7d3a34b0",
+    "src/rag_hub/validation_sampling.py": "64583c74fda2b9d14041430eb5e91878f54ee93b4bc1917452db39cdaddbf36b",
+    "uv.lock": "630aedb1f0c176fdfbc999f5a729c44ec62eaac1991b927a3ddabb349d046186"
+  },
+  "predecessor_release_sha256": "371b38590d522672e19a2e3678285f1e1c3068d49b161b05c4637ae4b2020089",
+  "scope": "Explicit optional scoped PDF QA only; no content approval or default execution.",
+  "version": "pdf-scoped-qa-1.0"
+}

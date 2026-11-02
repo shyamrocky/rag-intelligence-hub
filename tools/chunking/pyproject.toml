@@ -1,0 +1,23 @@
+[project]
+name = "rag-c01-chunking-pilot"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "rag-intelligence-hub",
+    "langchain-text-splitters==1.1.2",
+    "tokenizers==0.22.2",
+]
+
+[tool.uv]
+package = false
+override-dependencies = [
+    "pymupdf==1.28.2",
+    "pydantic==2.14.1",
+    "markdown-it-py==4.2.0",
+]
+
+[tool.uv.sources]
+rag-intelligence-hub = { path = "../..", editable = true }
+
+[dependency-groups]
+dev = ["pytest==9.1.0", "ruff==0.14.14"]

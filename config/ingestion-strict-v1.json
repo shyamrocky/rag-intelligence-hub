@@ -1,0 +1,1 @@
+{"build_path":"releases/ingestion/strict-v1/BUILD.json","build_sha256":"393da26bb944bbec8f1f6c48278fce6b6dd21e7e58c97e90d02bd754189fffe9","foundation_path":"data/ingestion/strict-v1","foundation_sha256":"f264acf42b4fd64ab226d4fbcd51e22a852c7c6726b72a1db2f89513e84a24d6","runtime_root":"releases/ingestion/strict-v1/root","schema":"strict-ingestion-selection-1.0"}

@@ -1,0 +1,82 @@
+{
+  "additionalProperties": false,
+  "description": "Declared configuration is not proof of provider limits or owner authorization.",
+  "properties": {
+    "context_window": {
+      "exclusiveMinimum": 0,
+      "title": "Context Window",
+      "type": "integer"
+    },
+    "maximum_input_tokens": {
+      "exclusiveMinimum": 0,
+      "title": "Maximum Input Tokens",
+      "type": "integer"
+    },
+    "maximum_output_tokens": {
+      "exclusiveMinimum": 0,
+      "title": "Maximum Output Tokens",
+      "type": "integer"
+    },
+    "message_format": {
+      "minLength": 1,
+      "title": "Message Format",
+      "type": "string"
+    },
+    "model_id": {
+      "minLength": 1,
+      "title": "Model Id",
+      "type": "string"
+    },
+    "provider": {
+      "minLength": 1,
+      "title": "Provider",
+      "type": "string"
+    },
+    "reserved_output_tokens": {
+      "exclusiveMinimum": 0,
+      "title": "Reserved Output Tokens",
+      "type": "integer"
+    },
+    "revision": {
+      "minLength": 1,
+      "title": "Revision",
+      "type": "string"
+    },
+    "safety_margin_tokens": {
+      "minimum": 0,
+      "title": "Safety Margin Tokens",
+      "type": "integer"
+    },
+    "structured_output_format": {
+      "minLength": 1,
+      "title": "Structured Output Format",
+      "type": "string"
+    },
+    "tokenizer_id": {
+      "minLength": 1,
+      "title": "Tokenizer Id",
+      "type": "string"
+    },
+    "tokenizer_revision": {
+      "minLength": 1,
+      "title": "Tokenizer Revision",
+      "type": "string"
+    }
+  },
+  "required": [
+    "provider",
+    "model_id",
+    "revision",
+    "tokenizer_id",
+    "tokenizer_revision",
+    "context_window",
+    "maximum_input_tokens",
+    "maximum_output_tokens",
+    "reserved_output_tokens",
+    "safety_margin_tokens",
+    "message_format",
+    "structured_output_format"
+  ],
+  "title": "ModelConfiguration",
+  "type": "object"
+}

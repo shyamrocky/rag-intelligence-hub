@@ -1,0 +1,48 @@
+{
+  "conflicting_owner_decisions": "No independent HTML owner decisions submitted in the audited inputs; earlier advice is not approval. Any new receipt requires a new version and reconciliation.",
+  "context_overlay_path": "data/normalized/html/context-remediation-v1/overlays.json",
+  "corpus_manifest_sha256": "1a2e688ac6c022895309468737f130ed57efbe243f12dc277374334c0310265b",
+  "exclusions": [
+    "corrupt_or_unbound_text",
+    "unresolved_material_ambiguity",
+    "no_usable_text",
+    "navigation_without_knowledge_payload"
+  ],
+  "frozen_evidence": {
+    "config/html-admission-publication.json": "f4e99a097402be4d2a841794fc590a60fbd590df510a5f56c9fefb724209e094",
+    "config/html-remediated-admission-publication.json": "120cece51d18793f7f2132c03507d0822d9abac3c282fc72a7bc637d7172b8f8",
+    "data/normalized/html/context-remediation-v1/manifest.json": "cb79cc0422a37605da9b9b169d1cb74fe30d5cb2647552794c73d44399414ad1",
+    "data/normalized/html/text-recovery-v1/manifest.json": "7fa862fc6d81358f839fca1c1adc8a5062c1c1cfbddb3efb085c97acab140f85",
+    "data/validation/corpus-qa/full-16-source-review-v1/html/REVIEW_UNITS.json": "f9ea0bb2cb6046e2a711806365884cee8c139c44b48577b3c996f3a90608e4a3",
+    "data/validation/html/scoped-admission-v1/EXCEPTIONS.json": "65c3f0a01fc65dd7a953be7ea2a9effd1d2bf5ff7e0a38788fdc73c081793537",
+    "data/validation/html/scoped-admission-v1/OWNER_REVIEW.json": "b81d00bd8cacf9b221ece41784e5a264bbd456e403111fd898d2f07e4c2ec63f",
+    "data/validation/html/scoped-admission-v2/CLOSURE_RESULTS.json": "e4158769f2899107f312ebf67cb1a77bb17f4f23aec99911621c43bd522c931d",
+    "data/validation/html/scoped-admission-v2/EXCEPTIONS.json": "17e33b73c9d9c09a974f3c50296155b90ea8d6154124581868a0f5a1b3f5afdb",
+    "data/validation/html/v2/manifest.json": "230c5eb870be6c0ebc93838abb3b878ff9d249ed4d231a766e6e425a9c6b580e"
+  },
+  "owner_authorization": "Maximum Usable Text Recovery for HTML explicit execution request",
+  "readiness": false,
+  "scope": "All 457 frozen HTML Sections; source-verified standard/illustrative text scopes, explicit HOLD/non-text/non-knowledge dispositions; preserve prior 341 admissions",
+  "source_ids": [
+    "C03",
+    "C05",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C15",
+    "C16"
+  ],
+  "supported_types": [
+    "source_complete_text",
+    "source_caption_text",
+    "native_simple_HTML_table_text",
+    "source_snapshot_code_payload",
+    "bounded_source_summary"
+  ],
+  "text_overlay_path": "data/normalized/html/text-recovery-v1/overlays.json",
+  "version": "html-usable-text-qualification-1.0"
+}

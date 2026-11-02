@@ -1,0 +1,7 @@
+{
+  "authorization_sha256": "810f6b8b7e6f937a0c75798f3dab871c023dc3eb42aa1778b2730bdc5ffa05e4",
+  "expected_manifest_sha256": "c009966ac7dd6abfc815a0d21dc350d386fc5e222a00ef295564248cb7b93ac8",
+  "expected_release_sha256": "a3150a29be457207a34c1bbc49149dd7b6c0407d1112869e7ad75d2b968b3b35",
+  "manifest_path": "data/validation/html/c10-admission-v1/manifests/c009966ac7dd6abfc815a0d21dc350d386fc5e222a00ef295564248cb7b93ac8.json",
+  "release_path": "config/c10-qa-successor.json"
+}

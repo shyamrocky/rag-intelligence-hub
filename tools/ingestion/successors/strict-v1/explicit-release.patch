@@ -1,0 +1,31 @@
+--- a/src/rag_hub/shared/pipeline.py
++++ b/src/rag_hub/shared/pipeline.py
+@@ -39,7 +39,9 @@
+ 
+ 
+ def verify_foundation(home=None):
+-    home = Path(home or HOME).resolve()
++    if home is None or not str(home).strip():
++        raise ValueError("explicit_ingestion_release_required")
++    home = Path(home).resolve()
+     freeze = json.loads((home / "foundation-freeze.json").read_text())
+     if Path(rag_hub.__file__).resolve() != ROOT / "src/rag_hub/__init__.py":
+         raise ValueError("unexpected_legacy_import_origin")
+@@ -78,11 +80,15 @@
+ 
+ 
+ def execute(manifest, registry, *, output=None, release=None):
+-    home = Path(release or HOME).resolve()
++    if release is None or not str(release).strip():
++        raise ValueError("explicit_ingestion_release_required")
++    if output is None or not str(output).strip():
++        raise ValueError("explicit_ingestion_output_required")
++    home = Path(release).resolve()
+     started = datetime.now(UTC)
+     tick = time.perf_counter()
+     attempt = started.strftime("%Y%m%dT%H%M%S.%fZ-") + uuid4().hex[:8]
+-    output = Path(output or home).resolve()
++    output = Path(output).resolve()
+     if not output.is_relative_to(home.resolve()):
+         raise ValueError("candidate_output_must_stay_in_private_workstream")
+     source_id = str(manifest.get("doc_id", "unresolved-source"))

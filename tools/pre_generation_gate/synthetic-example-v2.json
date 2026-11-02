@@ -1,0 +1,30 @@
+{
+  "status": "ANSWERED",
+  "answer": "Atlas Search supports keyword search and semantic search.",
+  "claims": [
+    {
+      "claim_text": "Atlas Search supports keyword search and semantic search.",
+      "evidence_unit_ids": [
+        "EXAMPLE-UNIT-001"
+      ],
+      "supporting_quotes": [
+        {
+          "evidence_unit_id": "EXAMPLE-UNIT-001",
+          "quote": "Atlas Search supports keyword search and semantic search."
+        }
+      ]
+    }
+  ],
+  "missing_information": [],
+  "relevant_qualifications": [],
+  "requirement_coverage": [
+    {
+      "requirement": "Two supported search methods",
+      "status": "SUPPORTED",
+      "evidence_unit_ids": [
+        "EXAMPLE-UNIT-001"
+      ]
+    }
+  ],
+  "conflicts_detected": []
+}

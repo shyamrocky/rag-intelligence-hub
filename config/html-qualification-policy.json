@@ -1,0 +1,38 @@
+{
+  "conflicting_owner_decisions": "No independent HTML owner decisions submitted in the audited inputs; earlier advice is not approval. Any new receipt requires a new version and reconciliation.",
+  "corpus_manifest_sha256": "1a2e688ac6c022895309468737f130ed57efbe243f12dc277374334c0310265b",
+  "exclusions": [
+    "mathematics",
+    "tables",
+    "visuals",
+    "unknown",
+    "hidden_or_interactive",
+    "unresolved_context"
+  ],
+  "frozen_evidence": {
+    "data/validation/corpus-qa/full-16-source-review-v1/html/REVIEW_UNITS.json": "f9ea0bb2cb6046e2a711806365884cee8c139c44b48577b3c996f3a90608e4a3",
+    "data/validation/html/v2/manifest.json": "230c5eb870be6c0ebc93838abb3b878ff9d249ed4d231a766e6e425a9c6b580e"
+  },
+  "readiness": false,
+  "scope": "Frozen textual units only; deterministic DOM/source proof plus complete source-supported context; no semantic truth or visual certification",
+  "source_ids": [
+    "C03",
+    "C05",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C15",
+    "C16"
+  ],
+  "supported_types": [
+    "heading_context",
+    "paragraph",
+    "text_list",
+    "plain_documentation_code"
+  ],
+  "version": "html-objective-qualification-1.0"
+}

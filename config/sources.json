@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1",
+  "sources": [
+    {
+      "doc_id": "C01",
+      "file": "C01—Original-RAG-paper.pdf",
+      "byte_size": 885323,
+      "sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "publisher": "Lewis et al. / arXiv",
+      "canonical_url": "https://arxiv.org/abs/2005.11401",
+      "original_url": "https://arxiv.org/pdf/2005.11401v4",
+      "source_version": "arXiv:2005.11401v4",
+      "source_format": "pdf",
+      "expected_pages": 19,
+      "language": "en"
+    },
+    {
+      "doc_id": "C04",
+      "file": "C04—LangChain-documentation.md",
+      "byte_size": 34709,
+      "sha256": "2faa8c25ba8a5a8ff5f9553243cf697ba63957b55264728998403546a9e7ffc0",
+      "title": "Build a semantic search engine with LangChain",
+      "publisher": "LangChain",
+      "canonical_url": "https://docs.langchain.com/oss/python/langchain/knowledge-base",
+      "original_url": "https://docs.langchain.com/oss/python/langchain/knowledge-base.md",
+      "source_version": null,
+      "source_format": "markdown_mdx",
+      "expected_pages": null,
+      "language": "en"
+    },
+    {
+      "doc_id": "C06",
+      "file": "C06—Chroma-research.pdf",
+      "byte_size": 3065048,
+      "sha256": "96d446d21dacb978786b9158e55dacdd9349c3cc6b705d54dd1b268dec09cc06",
+      "title": "Evaluating Chunking Strategies for Retrieval",
+      "publisher": "Chroma",
+      "canonical_url": "https://www.trychroma.com/research/evaluating-chunking",
+      "original_url": "https://www.trychroma.com/research/evaluating-chunking",
+      "source_version": null,
+      "source_format": "pdf",
+      "expected_pages": 82,
+      "language": "en"
+    }
+  ]
+}

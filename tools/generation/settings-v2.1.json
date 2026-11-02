@@ -1,0 +1,15 @@
+{
+  "schema": "generation-settings-1.0",
+  "provider": "openai",
+  "model": "gpt-6-luna",
+  "prompt_version": "grounded-generation-prompt-v2.1",
+  "response_schema": "grounded-response-2.0",
+  "reasoning_effort": "none",
+  "max_output_tokens": 4096,
+  "safety_margin_tokens": 1024,
+  "temperature": null,
+  "timeout_seconds": 120,
+  "service_tier": "default",
+  "region": "global",
+  "cache_ttl": "30m"
+}

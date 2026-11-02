@@ -1,0 +1,202 @@
+{
+  "$defs": {
+    "SourceContent": {
+      "additionalProperties": false,
+      "description": "An exact gateway source field, still bound to its whole verified unit.",
+      "properties": {
+        "source_pointer": {
+          "title": "Source Pointer",
+          "type": "string"
+        },
+        "content_type": {
+          "title": "Content Type",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "section_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Section Ids",
+          "type": "array"
+        },
+        "source_spans": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Source Spans",
+          "type": "array"
+        },
+        "native_source": {
+          "additionalProperties": true,
+          "title": "Native Source",
+          "type": "object"
+        },
+        "consumption_scope": {
+          "const": "complete_verified_unit_only",
+          "default": "complete_verified_unit_only",
+          "title": "Consumption Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_pointer",
+        "content_type",
+        "text",
+        "section_ids",
+        "source_spans",
+        "native_source"
+      ],
+      "title": "SourceContent",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Separate source, context, QA and lineage; no chunk or index is created.",
+  "properties": {
+    "schema_version": {
+      "const": "chunk-input-1.0",
+      "default": "chunk-input-1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "authority": {
+      "const": "DERIVED_PREPARATION_NOT_AUTHORIZATION",
+      "default": "DERIVED_PREPARATION_NOT_AUTHORIZATION",
+      "title": "Authority",
+      "type": "string"
+    },
+    "record_id": {
+      "title": "Record Id",
+      "type": "string"
+    },
+    "unit_id": {
+      "title": "Unit Id",
+      "type": "string"
+    },
+    "document_id": {
+      "title": "Document Id",
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        "pdf",
+        "html",
+        "markdown"
+      ],
+      "title": "Format",
+      "type": "string"
+    },
+    "reference_classification": {
+      "title": "Reference Classification",
+      "type": "string"
+    },
+    "indexable_source_content": {
+      "items": {
+        "$ref": "#/$defs/SourceContent"
+      },
+      "title": "Indexable Source Content",
+      "type": "array"
+    },
+    "required_context": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Required Context",
+      "type": "array"
+    },
+    "qa_observations": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Qa Observations",
+      "type": "array"
+    },
+    "qualification": {
+      "additionalProperties": true,
+      "title": "Qualification",
+      "type": "object"
+    },
+    "protected_consumable_projections": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Protected Consumable Projections",
+      "type": "array"
+    },
+    "preparation_limits": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Preparation Limits",
+      "type": "array"
+    },
+    "memberships": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Memberships",
+      "type": "array"
+    },
+    "section_bindings": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Section Bindings",
+      "type": "array"
+    },
+    "citation_locators": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Citation Locators",
+      "type": "array"
+    },
+    "publication_identity": {
+      "additionalProperties": true,
+      "title": "Publication Identity",
+      "type": "object"
+    },
+    "consumer_metadata": {
+      "additionalProperties": true,
+      "title": "Consumer Metadata",
+      "type": "object"
+    },
+    "evidence_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Evidence Sha256",
+      "type": "string"
+    }
+  },
+  "required": [
+    "record_id",
+    "unit_id",
+    "document_id",
+    "format",
+    "reference_classification",
+    "indexable_source_content",
+    "required_context",
+    "qa_observations",
+    "qualification",
+    "protected_consumable_projections",
+    "preparation_limits",
+    "memberships",
+    "section_bindings",
+    "citation_locators",
+    "publication_identity",
+    "consumer_metadata",
+    "evidence_sha256"
+  ],
+  "title": "ChunkInput",
+  "type": "object"
+}

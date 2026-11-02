@@ -1,0 +1,44 @@
+{
+  "authority": "Explicit project-owner full PDF text recovery and automatic qualification authorization; no invented individual human attestations",
+  "frozen_bindings": {
+    "data/normalized/pdf/four-pdf-poc-v1/manifest.json": "90bb9c97b92b6db725fbd0a078d2eee0e0aefd1301d15153f28a6b60536e7e07",
+    "data/normalized/pdf/text-recovery-v1/C01.json": "65584356a5ea46b665e997303d7dee4d45e8fb7855436e3f7cd2dfc44d26284b",
+    "data/normalized/pdf/text-recovery-v1/C02.json": "bdfa8e8d341746301a3bddd3a02a6526998e7a63c5dc6e62d312bad88956ad81",
+    "data/normalized/pdf/text-recovery-v1/C06.json": "ba33310a62cd836df28f7ad2509c0c820f7b3eeaac7f8bd72b1ce6bfed41a05e",
+    "data/normalized/pdf/text-recovery-v1/C14.json": "f9d2b46ebccc76b0d970fb8c96d2ce0ff749276962113ee69effa984b3091ef0",
+    "data/validation/pdf/scoped-prose-admission-v1/publications/8e25375a13e1f7c20524d6df438a1bea5b49f06bac0945889e091115a3106004/handoff.json": "408ff115731869e3bcfe41807ee9aa13d22d3e52154ef508d1ddf2daf4e72a8a",
+    "data/validation/pdf/scoped-prose-admission-v1/publications/8e25375a13e1f7c20524d6df438a1bea5b49f06bac0945889e091115a3106004/verified-passages.json": "c8652fba61bbefca14e4348908c12e2bcd5a9e9e2e01fe30c4e542ebb405b97d",
+    "data/validation/pdf/text-recovery-v1/compatibility/validation_reviews-c10-predecessor.py": "3606dc3148bf6e29628f2dc42a2fa5fd767c869aa639240c5b97e9dbd9256144",
+    "data/validation/pdf/text-recovery-v1/owner-math-references.original.json": "190b0bc5f24c1153eed4b3983a7126ea100a46bfef8ab155b724014c86b63ef7"
+  },
+  "historical_handoff": {
+    "path": "data/validation/pdf/scoped-prose-admission-v1/publications/8e25375a13e1f7c20524d6df438a1bea5b49f06bac0945889e091115a3106004/handoff.json",
+    "sha256": "408ff115731869e3bcfe41807ee9aa13d22d3e52154ef508d1ddf2daf4e72a8a"
+  },
+  "math_reference_path": "data/validation/pdf/text-recovery-v1/owner-math-references.original.json",
+  "recovery_evidence": {
+    "C01": "data/normalized/pdf/text-recovery-v1/C01.json",
+    "C02": "data/normalized/pdf/text-recovery-v1/C02.json",
+    "C06": "data/normalized/pdf/text-recovery-v1/C06.json",
+    "C14": "data/normalized/pdf/text-recovery-v1/C14.json"
+  },
+  "required_checks": [
+    "source_identity",
+    "exact_span_accounting",
+    "source_supported_context",
+    "typed_structural_evidence",
+    "complete_unit_membership",
+    "mandatory_qualifications",
+    "no_integrity_failure"
+  ],
+  "schema": "pdf-source-text-policy-1.0",
+  "scope": [
+    "C01",
+    "C02",
+    "C06",
+    "C14"
+  ],
+  "unsupported": "Unresolved glyph, script, clipped table, graph-series or prose dependencies remain unavailable; safe HOLD is not successful extraction",
+  "version": "pdf-source-text-qualification-1.0",
+  "whole_source_ready": false
+}

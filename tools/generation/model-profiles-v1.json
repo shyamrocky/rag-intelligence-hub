@@ -1,0 +1,52 @@
+{
+  "schema": "openai-model-profiles-1.0",
+  "version": "openai-model-profiles-2026-10-27-v1",
+  "profiles": {
+    "gpt-6-luna": {
+      "model": "gpt-6-luna",
+      "revision": "gpt-6-luna",
+      "revision_kind": "MOVING_ALIAS_NO_DATED_SNAPSHOT_VERIFIED",
+      "context_window": 1050000,
+      "maximum_input_tokens": 1050000,
+      "input_limit_basis": "Conservative total-context ceiling; no distinct provider input ceiling documented",
+      "maximum_output_tokens": 128000,
+      "reasoning_efforts": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "temperature_supported": false,
+      "structured_outputs_documented": true,
+      "count_method": "responses.input_tokens.count",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "reviewed_on": "2026-10-27",
+      "review_by": "2026-11-03"
+    },
+    "gpt-6.1-terra": {
+      "model": "gpt-6.1-terra",
+      "revision": "gpt-6.1-terra",
+      "revision_kind": "MOVING_ALIAS_NO_DATED_SNAPSHOT_VERIFIED",
+      "context_window": 1050000,
+      "maximum_input_tokens": 1050000,
+      "input_limit_basis": "Conservative total-context ceiling; no distinct provider input ceiling documented",
+      "maximum_output_tokens": 128000,
+      "reasoning_efforts": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "temperature_supported": false,
+      "structured_outputs_documented": true,
+      "count_method": "responses.input_tokens.count",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "reviewed_on": "2026-10-27",
+      "review_by": "2026-11-03"
+    }
+  }
+}

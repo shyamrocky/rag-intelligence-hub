@@ -1,0 +1,45 @@
+{
+  "schema": "bge-tokenizer-spec-1.0",
+  "repo": "BAAI/bge-small-en-v1.5",
+  "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "runtime_versions": {
+    "tokenizers": "0.22.2",
+    "langchain-text-splitters": "1.1.2",
+    "langchain-core": "1.7.0"
+  },
+  "files": {
+    "tokenizer.json": {
+      "path": "data/tooling/tokenizers/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+    },
+    "tokenizer_config.json": {
+      "path": "data/tooling/tokenizers/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json",
+      "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+    },
+    "special_tokens_map.json": {
+      "path": "data/tooling/tokenizers/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/special_tokens_map.json",
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    "vocab.txt": {
+      "path": "data/tooling/tokenizers/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "config.json": {
+      "path": "data/tooling/tokenizers/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json",
+      "sha256": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750"
+    },
+    "sentence_bert_config.json": {
+      "path": "data/tooling/tokenizers/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json",
+      "sha256": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf"
+    },
+    "README.md": {
+      "path": "data/tooling/tokenizers/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md",
+      "sha256": "ddb964361a55c6e5dfca6361615854b260c9c960205d04c7520151aaa1d75837"
+    }
+  },
+  "input_limit": 512,
+  "special_tokens": 2,
+  "document_instruction": "",
+  "document_context_policy": "Explicit source-backed required headings only; no QA commentary.",
+  "license": "MIT per pinned official model card; tokenizer/configuration only, no weights."
+}

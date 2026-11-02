@@ -1,0 +1,1 @@
+{"manifest_path":"data/chunking/m3-durable-v1/manifest.json","manifest_sha256":"49e254767e3aa4f5b0724cf95ec3ab0d5787d49d74d6bacf5420dc04486dd57c","reader":"rag_hub.qualified_chunk_catalog.QualifiedChunkCatalog","schema":"chunk-catalog-selection-1.0"}

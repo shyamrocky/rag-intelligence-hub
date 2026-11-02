@@ -1,0 +1,300 @@
+{
+  "$defs": {
+    "ClaimAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_index": {
+          "minimum": 0,
+          "title": "Claim Index",
+          "type": "integer"
+        },
+        "claim_sha256": {
+          "title": "Claim Sha256",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "SUPPORTED",
+            "PARTIALLY_SUPPORTED",
+            "CONTRADICTED",
+            "UNSUPPORTED",
+            "INDETERMINATE"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "passages": {
+          "items": {
+            "$ref": "#/$defs/Passage"
+          },
+          "title": "Passages",
+          "type": "array"
+        },
+        "quotation_coverage_gap": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quotation Coverage Gap"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_index",
+        "claim_sha256",
+        "outcome",
+        "rationale",
+        "passages"
+      ],
+      "title": "ClaimAssessment",
+      "type": "object"
+    },
+    "DisclosureAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "outcome": {
+          "enum": [
+            "SATISFIED",
+            "MISSING",
+            "INDETERMINATE"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "passages": {
+          "items": {
+            "$ref": "#/$defs/Passage"
+          },
+          "title": "Passages",
+          "type": "array"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        }
+      },
+      "required": [
+        "outcome",
+        "rationale",
+        "passages"
+      ],
+      "title": "DisclosureAssessment",
+      "type": "object"
+    },
+    "Passage": {
+      "additionalProperties": false,
+      "properties": {
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "field_sha256": {
+          "title": "Field Sha256",
+          "type": "string"
+        },
+        "pointer": {
+          "title": "Pointer",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "unit_id": {
+          "title": "Unit Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "unit_id",
+        "pointer",
+        "field_sha256",
+        "start",
+        "end"
+      ],
+      "title": "Passage",
+      "type": "object"
+    },
+    "RequirementAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_indices": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Claim Indices",
+          "type": "array"
+        },
+        "outcome": {
+          "enum": [
+            "COMPLETE",
+            "PARTIAL",
+            "INCOMPLETE",
+            "INDETERMINATE"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "passages": {
+          "items": {
+            "$ref": "#/$defs/Passage"
+          },
+          "title": "Passages",
+          "type": "array"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "requirement": {
+          "minLength": 1,
+          "title": "Requirement",
+          "type": "string"
+        },
+        "requirement_id": {
+          "minLength": 1,
+          "title": "Requirement Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "requirement_id",
+        "requirement",
+        "outcome",
+        "rationale",
+        "claim_indices",
+        "passages"
+      ],
+      "title": "RequirementAssessment",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "answer_claim_inventory_complete": {
+      "title": "Answer Claim Inventory Complete",
+      "type": "boolean"
+    },
+    "assessed_at": {
+      "minLength": 1,
+      "title": "Assessed At",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/ClaimAssessment"
+      },
+      "title": "Claims",
+      "type": "array"
+    },
+    "conflicts": {
+      "$ref": "#/$defs/DisclosureAssessment"
+    },
+    "independent_of_generator": {
+      "title": "Independent Of Generator",
+      "type": "boolean"
+    },
+    "method": {
+      "enum": [
+        "HUMAN_REVIEW",
+        "LLM_JUDGE",
+        "OFFLINE_FIXTURE",
+        "ASSISTANT_ANALYSIS"
+      ],
+      "title": "Method",
+      "type": "string"
+    },
+    "package_sha256": {
+      "title": "Package Sha256",
+      "type": "string"
+    },
+    "qualifications": {
+      "$ref": "#/$defs/DisclosureAssessment"
+    },
+    "question_requirements_reviewed": {
+      "title": "Question Requirements Reviewed",
+      "type": "boolean"
+    },
+    "question_sha256": {
+      "title": "Question Sha256",
+      "type": "string"
+    },
+    "request_sha256": {
+      "title": "Request Sha256",
+      "type": "string"
+    },
+    "requirements": {
+      "items": {
+        "$ref": "#/$defs/RequirementAssessment"
+      },
+      "title": "Requirements",
+      "type": "array"
+    },
+    "response_sha256": {
+      "title": "Response Sha256",
+      "type": "string"
+    },
+    "response_status_appropriate": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Response Status Appropriate"
+    },
+    "reviewer": {
+      "minLength": 1,
+      "title": "Reviewer",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "answer-quality-assessment-2.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "uncertainty": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Uncertainty",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "method",
+    "reviewer",
+    "assessed_at",
+    "question_sha256",
+    "response_sha256",
+    "package_sha256",
+    "request_sha256",
+    "independent_of_generator",
+    "answer_claim_inventory_complete",
+    "question_requirements_reviewed",
+    "uncertainty",
+    "response_status_appropriate",
+    "claims",
+    "requirements",
+    "qualifications",
+    "conflicts"
+  ],
+  "title": "Assessment",
+  "type": "object"
+}

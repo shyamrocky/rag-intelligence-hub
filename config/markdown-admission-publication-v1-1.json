@@ -1,0 +1,12 @@
+{
+  "admission": {
+    "authorization_path": "data/validation/markdown/scoped-admission-v1/final-v1-1/authorizations/c6013055a3f37f6ea1734c350947ce6dd3f0cc2486641ff5e7808c8f678c13bf.json",
+    "evidence_path": "data/validation/markdown/v2/illustrative-recovery-v1/assessment.json",
+    "expected_authorization_sha256": "c6013055a3f37f6ea1734c350947ce6dd3f0cc2486641ff5e7808c8f678c13bf",
+    "expected_evidence_sha256": "f3e603eb57afa2621f729ca799a25d555549c220a17ec62fefacfc5d84def726",
+    "expected_qa_release_sha256": "d8a4b9989972bd853c6a1ef0dee0b5a017998c38d4b2fda4259747babe032779",
+    "publication_path": "data/validation/markdown/scoped-admission-v1/publications/46bcda194aef58ad5a91125b76240713ab742a2ec06ba986f2f728ad16f80852/C04.json",
+    "publication_sha256": "46bcda194aef58ad5a91125b76240713ab742a2ec06ba986f2f728ad16f80852",
+    "qa_release_path": "config/markdown-integrated-qa-successor-v1-1.json"
+  }
+}

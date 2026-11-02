@@ -1,0 +1,7 @@
+{
+  "authorization_sha256": "9e865df2db4162f046db1fbdf0edfd287ed04fd888b444dd7b8d5a37f0cc566f",
+  "expected_manifest_sha256": "5c2af46ee73e7dea8c39961b0483e716e554adc3c89b5b88b7ed04bf29a99d8a",
+  "expected_release_sha256": "9a0b0bfc9b56e85857a88708a8f1b6524e64c265ef8718313f0df9fcc78bff1a",
+  "manifest_path": "data/validation/pdf/text-recovery-v1/publications/9e865df2db4162f046db1fbdf0edfd287ed04fd888b444dd7b8d5a37f0cc566f/manifest.json",
+  "release_path": "config/pdf-text-qa-successor-v1-1.json"
+}

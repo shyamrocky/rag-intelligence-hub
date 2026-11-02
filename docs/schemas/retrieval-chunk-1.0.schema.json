@@ -1,0 +1,170 @@
+{
+  "$defs": {
+    "SourceSlice": {
+      "additionalProperties": false,
+      "properties": {
+        "pointer": {
+          "title": "Pointer",
+          "type": "string"
+        },
+        "projection_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Projection Sha256",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "text_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Text Sha256",
+          "type": "string"
+        },
+        "content_type": {
+          "title": "Content Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pointer",
+        "projection_sha256",
+        "start",
+        "end",
+        "text_sha256",
+        "content_type"
+      ],
+      "title": "SourceSlice",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "retrieval-chunk-1.0",
+      "default": "retrieval-chunk-1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "authority": {
+      "const": "DERIVED_CATALOG_NOT_AUTHORIZATION",
+      "default": "DERIVED_CATALOG_NOT_AUTHORIZATION",
+      "title": "Authority",
+      "type": "string"
+    },
+    "chunk_id": {
+      "title": "Chunk Id",
+      "type": "string"
+    },
+    "configuration_id": {
+      "title": "Configuration Id",
+      "type": "string"
+    },
+    "unit_id": {
+      "title": "Unit Id",
+      "type": "string"
+    },
+    "document_id": {
+      "title": "Document Id",
+      "type": "string"
+    },
+    "format": {
+      "enum": [
+        "pdf",
+        "html",
+        "markdown"
+      ],
+      "title": "Format",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/SourceSlice"
+    },
+    "parent_binding": {
+      "additionalProperties": true,
+      "title": "Parent Binding",
+      "type": "object"
+    },
+    "mandatory_evidence_refs": {
+      "additionalProperties": true,
+      "title": "Mandatory Evidence Refs",
+      "type": "object"
+    },
+    "lineage": {
+      "additionalProperties": true,
+      "title": "Lineage",
+      "type": "object"
+    },
+    "reference_classification": {
+      "title": "Reference Classification",
+      "type": "string"
+    },
+    "heading_context_sha256": {
+      "title": "Heading Context Sha256",
+      "type": "string"
+    },
+    "token_count": {
+      "exclusiveMinimum": 0,
+      "title": "Token Count",
+      "type": "integer"
+    },
+    "body_token_count": {
+      "minimum": 0,
+      "title": "Body Token Count",
+      "type": "integer"
+    },
+    "boundary_decision": {
+      "title": "Boundary Decision",
+      "type": "string"
+    },
+    "reference_numbers": {
+      "items": {
+        "type": "integer"
+      },
+      "title": "Reference Numbers",
+      "type": "array"
+    },
+    "unknown_token_offsets": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Unknown Token Offsets",
+      "type": "array"
+    },
+    "review_notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Review Notes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "chunk_id",
+    "configuration_id",
+    "unit_id",
+    "document_id",
+    "format",
+    "source",
+    "parent_binding",
+    "mandatory_evidence_refs",
+    "lineage",
+    "reference_classification",
+    "heading_context_sha256",
+    "token_count",
+    "body_token_count",
+    "boundary_decision",
+    "reference_numbers",
+    "unknown_token_offsets",
+    "review_notes"
+  ],
+  "title": "RetrievalChunk",
+  "type": "object"
+}

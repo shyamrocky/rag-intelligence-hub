@@ -1,0 +1,30 @@
+{
+  "version": "quality-1.0",
+  "input_run_id": "e78db572b9287860a350bb0c53f4e7fe822d394f9969744a75c2b0881a8ed169",
+  "artifact_sha256": {
+    "reviews.json": "da8b104aab3df1101295001a4cacc9d7ff121d99c771f4fa3b54dce25ae1383e",
+    "report.json": "ede9ad912c3086a3061cb9d63dbc309d86b2ad10f6b68769c06b28f6fc2444d3",
+    "holds.jsonl": "56ffee333e8c57c47774e76b872f72eba34780e1f47d354e85293793e0a04492",
+    "blocks.jsonl": "787067c96ce1253dd95d9ddcdfcf8680b8e7e975744a3a70e50853ddddd82546",
+    "manifest.json": "26a08eb488252d823dbf56d152c9faca02149a8f71be16867077f47b1ad84241",
+    "audit.jsonl": "8eb6a22ad51b7b604e7f685840edfdd62e1e0ab6bcb717e94862aa3b2b1662cf",
+    "sidecars.jsonl": "2c205c3ab58124243022854d54fb1d3289b5c269714c75fa5d1310535b8a1fe4",
+    "sections.jsonl": "b3e82495d65055cba9300bdca07499e4abc63c36af9c5c117434965c222a9cb3"
+  },
+  "expected_hold_count": 1665,
+  "expected_original_approvals": 9,
+  "seed": "rag-hub-quality-2026-10-19",
+  "sample_targets": {
+    "low": 45,
+    "medium:C01": 30,
+    "medium:C06": 30,
+    "high": 20
+  },
+  "automatic_documents": [
+    "C04"
+  ],
+  "automatic_formats": [
+    "markdown_mdx"
+  ],
+  "min_eligible_reviews_per_cohort": 3
+}

@@ -1,0 +1,1 @@
+{"manifest_path":"data/chunking/m3-qualified-v1/manifest.json","manifest_sha256":"1aa585798619b21d0aaee73513eeae466900040bd04a4fcbc466c0e4b749276e","reader":"rag_hub.qualified_chunk_catalog.QualifiedChunkCatalog","schema":"chunk-catalog-selection-1.0"}
